@@ -430,6 +430,71 @@ const GlobalStyles = () => (
         .section-title {
             font-size: 2.5rem;
         }
+        .spotlight {
+            width: 80%; /* Make spotlight responsive */
+            height: 500px;
+        }
+        .cta-button {
+            padding: 18px 35px;
+            font-size: 1.1rem;
+        }
+        .social-links a {
+            padding: 12px 20px;
+            font-size: 1.5rem;
+        }
+        .event-section {
+            padding: 80px 20px;
+        }
+        .join-section {
+            padding: 60px 20px;
+        }
+        .feature-card {
+            padding: 30px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo {
+            font-size: 2.8rem;
+            letter-spacing: 4px;
+            text-shadow: 2px 2px 0px #ff6b6b, 4px 4px 0px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            letter-spacing: 4px;
+        }
+        .section-title {
+            font-size: 2rem;
+        }
+        .section-title::after {
+            width: 100px;
+            margin: 15px auto;
+        }
+        .feature-card h3 {
+            font-size: 1.5rem;
+        }
+        .event-card h3 {
+            font-size: 1.6rem;
+        }
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1rem;
+            letter-spacing: 2px;
+        }
+        .social-links a {
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            gap: 15px;
+        }
+        .section {
+            padding: 80px 20px;
+        }
+        .event-section {
+            border-radius: 30px;
+        }
+        .join-section {
+            border-radius: 30px;
+        }
     }
   `}</style>
 );
@@ -460,60 +525,59 @@ const Hero = ({ onCtaClick }) => (
       <div className="college-badge">PROUDLY STARTED BY STUDENTS OF NIT TRICHY</div>
       <p className="tagline">"Where Future Legends Find Their Voice"</p>
       <button className="cta-button" onClick={onCtaClick}>
-        JOIN US
+        JOIN US NOW
       </button>
     </div>
   </section>
 );
 
 // --- Features Component ---
-// const Features = () => (
-//   <section className="section">
-//     <h2 className="section-title">Why Kömikos?</h2>
-//     <div className="features">
-//       <div className="feature-card">
-//         <div className="feature-icon">🎤</div>
-//         <h3>Open Mic Nights</h3>
-//         <p>Think you're funny? Prove it! Every Thursday, students can take the stage and show off their comedy chops. No experience needed, just bring your best material!</p>
-//       </div>
-//       <div className="feature-card">
-//         <div className="feature-icon">⭐</div>
-//         <h3>Pro Comedians</h3>
-//         <p>Watch established comedians perform every weekend. Learn from the best while laughing your finals stress away. Past performers include top national acts!</p>
-//       </div>
-//       <div className="feature-card">
-//         <div className="feature-icon">🎓</div>
-//         <h3>Student Discounts</h3>
-//         <p>College budget? No problem. Enjoy amazing comedy at student-friendly prices every show. Because laughter shouldn't break the bank!</p>
-//       </div>
-//     </div>
-//     <div style={{ textAlign: 'center' }}> {/* Added wrapper for centering microphone */}
-//         <div className="microphone">🎙️</div>
-//     </div>
-//   </section>
-// );
+const Features = () => (
+  <section className="section">
+    <h2 className="section-title">Why Kömikos?</h2>
+    <div className="features">
+      <div className="feature-card">
+        <div className="feature-icon">🎤</div>
+        <h3>Open Mic Nights</h3>
+        <p>Think you're funny? Prove it! Every Thursday, students can take the stage and show off their comedy chops. No experience needed, just bring your best material!</p>
+      </div>
+      <div className="feature-card">
+        <div className="feature-icon">⭐</div>
+        <h3>Pro Comedians</h3>
+        <p>Watch established comedians perform every weekend. Learn from the best while laughing your finals stress away. Past performers include top national acts!</p>
+      </div>
+      <div className="feature-card">
+        <div className="feature-icon">🎓</div>
+        <h3>Student Discounts</h3>
+        <p>College budget? No problem. Enjoy amazing comedy at student-friendly prices every show. Because laughter shouldn't break the bank!</p>
+      </div>
+    </div>
+    <div style={{ textAlign: 'center' }}> {/* Added wrapper for centering microphone */}
+        <div className="microphone">🎙️</div>
+    </div>
+  </section>
+);
 
 // --- Events Component ---
 const Events = ({ eventsRef }) => (
   <section className="section event-section" ref={eventsRef}>
-    <h2 className="section-title">Future Preparations</h2>
+    <h2 className="section-title">OUR FUTURE</h2>
     <div className="event-grid">
       <div className="event-card">
-        <div className="event-date">WEEK 1 MEME COMPETITION</div>
-        <h3>Meme Competion : Send us Now</h3>
-        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for all winners!</p>
+        <div className="event-date">WEEK 1 MEME COMP</div>
+        <h3>Meme: Win Big</h3>
+        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for everyone!</p>
       </div>
-       <div className="event-card">
-        <div className="event-date">WEEK 1 MEME COMPETITION</div>
-        <h3>Meme Competion : Send us Now</h3>
-        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for all winners!</p>
+      <div className="event-card">
+        <div className="event-date">WEEK 1 MEME COMP</div>
+        <h3>Meme: Win Big</h3>
+        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for everyone!</p>
       </div>
-       <div className="event-card">
-        <div className="event-date">WEEK 1 MEME COMPETITION</div>
-        <h3>Meme Competion : Send us Now</h3>
-        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for all winners!</p>
+      <div className="event-card">
+        <div className="event-date">WEEK 1 MEME COMP</div>
+        <h3>Meme: Win Big</h3>
+        <p>Laugh away your stress before finals! Featuring local comedians and student performers. Free gifts for everyone!</p>
       </div>
-      
     </div>
   </section>
 );
@@ -540,9 +604,9 @@ const Footer = () => (
     <p style={{ fontSize: '1.1rem' }}>Student Union Building, Room 204</p>
     <p style={{ fontSize: '1.1rem', marginTop: '10px' }}>Email: info@komikos.nitt.edu</p>
     <div className="social-links">
-      <a href="#">📱 Instagram</a>
-      <a href="#">📘 Facebook</a>
-      <a href="#">🐦 Twitter</a>
+      <a href="/#">📱 Instagram</a>
+      <a href="/#">📘 Facebook</a>
+      <a href="/#">🐦 Twitter</a>
     </div>
     <p style={{ marginTop: '40px', color: '#888', fontSize: '0.9rem' }}>© 2025 Kömikos Comedy Club. All rights reserved.</p>
     <p style={{ color: '#666', fontSize: '0.9rem', marginTop: '10px' }}>Making NIT Trichy laugh since 2025 🎭</p>
@@ -633,7 +697,7 @@ export default function App() {
       <Background />
       <main>
         <Hero onCtaClick={scrollToEvents} />
-        {/* <Features /> */}
+        <Features />
         <Events eventsRef={eventsSectionRef} />
         <Join />
       </main>
